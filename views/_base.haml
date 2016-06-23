@@ -1,0 +1,7 @@
+%h1 ネガポジ分析
+%p
+  下の枠に分析したい文章を入力してください。
+  %br 1から−1で感情を表します。1に近いほどポジティブ、−1に近いほどネガティブです。
+%form{ action: '/', method: 'post'}
+  %textarea{ name: 'input_text', rows: 20, cols: 120 }
+  %input{ type: 'submit', name: 'submit', value: '分析する' }

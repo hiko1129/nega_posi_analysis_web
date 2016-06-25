@@ -1,18 +1,26 @@
+%header
+  %h1.text-center.page-header ネガポジ分析
 %div.container
-  %header
   %div.container-fluid
     %div.row
       %div.col-sm-2
+        %p.text-center 参考サイト等
+        %ul.list-group
+          %li.list-group-item
+            %a{ href: 'http://www.lr.pi.titech.ac.jp/~takamura/pubs/pn_ja.dic' } 単語感情極性対応表
+          %li.list-group-item
+            %a{ href: 'http://qiita.com/uchim/items/db20d662d762efbfa9e5' } Qiitaのページ
+          %li.list-group-item
+            %a{ href: 'http://repo.flib.u-fukui.ac.jp/dspace/bitstream/10098/8763/1/Mem.Grad.Eng.Univ.Fukui.Vol.63(75-86).pdf' } PDF
       %div.col-sm-8
-        %h1.text-center ネガポジ分析
         %p
           下の枠に分析したい文章を入力してください。
           %br 1から−1で感情を表します。1に近いほどポジティブ、−1に近いほどネガティブです。
         %p= "値:#{@value}"
         %form{ action: '/', method: 'post'}
-          %textarea{ name: 'input_text', rows: 20, cols: 120 }
+          %textarea.form-control{ name: 'input_text', rows: '10' }
           %br
-          %button.btn{ type: 'submit'}
-            送信する
+          %button.btn.btn-primary{ type: 'submit'}
+            %span.glyphicon.glyphicon-upload 送信する
       %div.col-sm-2
   %footer

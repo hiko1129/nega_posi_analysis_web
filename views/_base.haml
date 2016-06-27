@@ -12,15 +12,16 @@
             %a{ href: 'http://qiita.com/uchim/items/db20d662d762efbfa9e5' } Qiitaのページ
           %li.list-group-item
             %a{ href: 'http://repo.flib.u-fukui.ac.jp/dspace/bitstream/10098/8763/1/Mem.Grad.Eng.Univ.Fukui.Vol.63(75-86).pdf' } PDF
-      %div.col-sm-8
+      %div.col-sm-8{ 'ng-controller' => 'tryAppController1' }
         %p
           下の枠に分析したい文章を入力してください。
-          %br 1から−1で感情を表します。1に近いほどポジティブ、−1に近いほどネガティブです。
+          %br 1から−1で感情を表します。1に近いほどポジティブ、−1に近いほどネガティブです。{{test}}
         %p= "値:#{@value}"
+        %p{ 'ng-show' => 'flag' } 少々お待ちください。
         %form{ action: '/', method: 'post'}
           %textarea.form-control{ name: 'input_text', rows: '10' }
           %br
-          %button.btn.btn-primary{ type: 'submit'}
+          %button.btn.btn-primary{ type: 'submit', 'ng-click' => 'onClick()' }
             %span.glyphicon.glyphicon-upload 送信する
       %div.col-sm-2
   %footer

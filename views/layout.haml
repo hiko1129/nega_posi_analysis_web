@@ -1,14 +1,15 @@
 !!! 5
-%html
+%html{ 'ng-app' => 'tryApp' }
   %head
     %meta{ charset: 'utf-8' }
     %meta{ http_equiv: 'X-UA-Compatible', content: 'IE=edge' }
     %meta{ name: 'viewport', content: 'width=device-width', initial_scale: 1 }
     %title sentiment analysis
-    %link{ rel: 'stylesheet', href: '/css/reset.css' }
+    %link{ rel: 'stylesheet', href: './css/reset.css' }
     %link{ rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' }
-    %link{ rel: 'stylesheet', href: '/css/base.css' }
   %body
     %script{ src: 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'}
     %script{ src: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' }
+    %script{ src: 'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js' }
+    %script{ src: './js/tryApp.js' }
     = yield

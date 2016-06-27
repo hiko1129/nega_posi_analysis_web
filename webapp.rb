@@ -9,6 +9,7 @@ get '/' do
 end
 
 post '/' do
+  haml :index
   text = params['input_text']
   p_o_s_table = set_table()
   analyzed_data = text_analyze(text)
